@@ -1,0 +1,10 @@
+<form action="/login" method="post" enctype="multipart/form-data" style="max-width: 300px; margin: 0 auto; text-align: center; background-color: #f0f0f0; padding: 20px;">
+    {% with messages = get_flashed_messages() %}
+    {% if messages %}
+        {{ messages[0] }}
+    {% endif %}
+    {% endwith %}
+    Username: <input type="text" name="username" style="width: 100%; padding: 10px; margin-bottom: 10px;"><br>
+    Image: <input type="file" name="image" style="width: 100%; padding: 10px; margin-bottom: 10px;"><br>
+    <input type="submit" value="Login" style="width: 100%; padding: 10px; background-color: #007BFF; color: #fff; border: none; cursor: pointer;">
+</form>
